@@ -1,0 +1,587 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Configuration &mdash; Read the Docs Sphinx Theme 2.0.1alpha1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d106d1b7"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="_static/debug.js?v=63710f7d"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Development" href="development.html" />
+    <link rel="prev" title="Installation" href="installing.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo-wordmark-light.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2.0.1alpha1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Theme Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#theme-options">Theme options</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#table-of-contents-options">Table of contents options</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#miscellaneous-options">Miscellaneous options</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#file-wide-metadata">File-wide metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#other-configuration">Other configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#adding-a-logo">Adding a logo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#adding-custom-css-or-javascript">Adding custom CSS or Javascript</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-the-table-of-contents-displays">How the table of contents displays</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demo Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html">1. Structural Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html#structural-elements-2">2. Structural Elements 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/demo.html">3. Paragraph Level Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/lists_tables.html">4. Lists &amp; Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/api.html">5. API documentation and generated content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/long.html">1. Long Sticky Nav</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Breadcrumbs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/level1/index.html">Breadcrumb Level 1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Read the Docs Sphinx Theme</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Configuration</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/configuring.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this heading"></a></h1>
+<section id="theme-options">
+<h2>Theme options<a class="headerlink" href="#theme-options" title="Permalink to this heading"></a></h2>
+<p>The following options can be defined in your project’s <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file, using
+the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_theme_options" title="(in Sphinx v7.3.0)"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_theme_options</span></code></a> configuration option.</p>
+<p>For example:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme_options</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;analytics_id&#39;</span><span class="p">:</span> <span class="s1">&#39;G-XXXXXXXXXX&#39;</span><span class="p">,</span>  <span class="c1">#  Provided by Google in your dashboard</span>
+    <span class="s1">&#39;analytics_anonymize_ip&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;logo_only&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;display_version&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;prev_next_buttons_location&#39;</span><span class="p">:</span> <span class="s1">&#39;bottom&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;style_external_links&#39;</span><span class="p">:</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="s1">&#39;vcs_pageview_mode&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;style_nav_header_background&#39;</span><span class="p">:</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span>
+    <span class="c1"># Toc options</span>
+    <span class="s1">&#39;collapse_navigation&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;sticky_navigation&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;navigation_depth&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+    <span class="s1">&#39;includehidden&#39;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s1">&#39;titles_only&#39;</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<section id="table-of-contents-options">
+<h3>Table of contents options<a class="headerlink" href="#table-of-contents-options" title="Permalink to this heading"></a></h3>
+<p>The following options change how <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree" title="(in Sphinx v7.3.0)"><code class="docutils literal notranslate"><span class="pre">toctree</span></code></a> directives generate
+documentation navigation.</p>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-collapse_navigation">
+<span class="sig-name descname"><span class="pre">collapse_navigation</span></span><a class="headerlink" href="#confval-collapse_navigation" title="Permalink to this definition"></a></dt>
+<dd><p>With this enabled, navigation entries are not expandable – the <code class="docutils literal notranslate"><span class="pre">[+]</span></code>
+icons next to each entry are removed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Setting <a class="reference internal" href="#confval-collapse_navigation"><code class="xref std std-confval docutils literal notranslate"><span class="pre">collapse_navigation</span></code></a> to <code class="docutils literal notranslate"><span class="pre">False</span></code> and using a high value
+for <a class="reference internal" href="#confval-navigation_depth"><code class="xref std std-confval docutils literal notranslate"><span class="pre">navigation_depth</span></code></a> on projects with many files and a deep file
+structure can cause long compilation times and can result in HTML files that
+are significantly larger in file size.</p>
+</div>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-sticky_navigation">
+<span class="sig-name descname"><span class="pre">sticky_navigation</span></span><a class="headerlink" href="#confval-sticky_navigation" title="Permalink to this definition"></a></dt>
+<dd><p>Scroll the navigation with the main page content as you scroll the page.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-navigation_depth">
+<span class="sig-name descname"><span class="pre">navigation_depth</span></span><a class="headerlink" href="#confval-navigation_depth" title="Permalink to this definition"></a></dt>
+<dd><p>The maximum depth of the table of contents tree. Set
+this to <code class="docutils literal notranslate"><span class="pre">-1</span></code> to allow unlimited depth.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>integer</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-includehidden">
+<span class="sig-name descname"><span class="pre">includehidden</span></span><a class="headerlink" href="#confval-includehidden" title="Permalink to this definition"></a></dt>
+<dd><p>Specifies if the navigation includes hidden table(s) of contents – that is,
+any <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#directive-toctree" title="(in Sphinx v7.3.0)"><code class="docutils literal notranslate"><span class="pre">toctree</span></code></a> directive that is marked with the <code class="docutils literal notranslate"><span class="pre">:hidden:</span></code>
+option.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-titles_only">
+<span class="sig-name descname"><span class="pre">titles_only</span></span><a class="headerlink" href="#confval-titles_only" title="Permalink to this definition"></a></dt>
+<dd><p>When enabled, page subheadings are not included in the
+navigation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p>False</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="miscellaneous-options">
+<h3>Miscellaneous options<a class="headerlink" href="#miscellaneous-options" title="Permalink to this heading"></a></h3>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-analytics_id">
+<span class="sig-name descname"><span class="pre">analytics_id</span></span><a class="headerlink" href="#confval-analytics_id" title="Permalink to this definition"></a></dt>
+<dd><p>If specified, Google Analytics’ <a class="reference external" href="https://developers.google.com/gtagjs">gtag.js</a> is included in your pages.
+Set the value to the ID provided to you by google (like <code class="docutils literal notranslate"><span class="pre">UA-XXXXXXX</span></code> or <code class="docutils literal notranslate"><span class="pre">G-XXXXXXXXXX</span></code>).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-analytics_anonymize_ip">
+<span class="sig-name descname"><span class="pre">analytics_anonymize_ip</span></span><a class="headerlink" href="#confval-analytics_anonymize_ip" title="Permalink to this definition"></a></dt>
+<dd><blockquote>
+<div><p>Anonymize visitor IP addresses in Google Analytics.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-canonical_url">
+<span class="sig-name descname"><span class="pre">canonical_url</span></span><a class="headerlink" href="#confval-canonical_url" title="Permalink to this definition"></a></dt>
+<dd><p>This will specify a <a class="reference external" href="https://en.wikipedia.org/wiki/Canonical_link_element">canonical URL</a> meta link element to tell search
+engines which URL should be ranked as the primary URL for your
+documentation. This is important if you have multiple URLs that your
+documentation is available through. The URL points to the root path of the
+documentation and requires a trailing slash.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>URL</p>
+</dd>
+</dl>
+<div class="deprecated">
+<p><span class="versionmodified deprecated">Deprecated since version 0.6.0: </span>Use <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_baseurl" title="(in Sphinx v7.3.0)"><code class="docutils literal notranslate"><span class="pre">html_baseurl</span></code></a> instead.</p>
+</div>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-display_version">
+<span class="sig-name descname"><span class="pre">display_version</span></span><a class="headerlink" href="#confval-display_version" title="Permalink to this definition"></a></dt>
+<dd><p>If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the version number is shown at the top of the sidebar.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-logo_only">
+<span class="sig-name descname"><span class="pre">logo_only</span></span><a class="headerlink" href="#confval-logo_only" title="Permalink to this definition"></a></dt>
+<dd><p>Only display the logo image, do not display the project name at the top of
+the sidebar</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-prev_next_buttons_location">
+<span class="sig-name descname"><span class="pre">prev_next_buttons_location</span></span><a class="headerlink" href="#confval-prev_next_buttons_location" title="Permalink to this definition"></a></dt>
+<dd><p>Location to display <span class="guilabel">Next</span> and <span class="guilabel">Previous</span> buttons. This
+can be either <code class="docutils literal notranslate"><span class="pre">bottom</span></code>, <code class="docutils literal notranslate"><span class="pre">top</span></code>, <code class="docutils literal notranslate"><span class="pre">both</span></code> , or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">bottom</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-style_external_links">
+<span class="sig-name descname"><span class="pre">style_external_links</span></span><a class="headerlink" href="#confval-style_external_links" title="Permalink to this definition"></a></dt>
+<dd><p>Add an icon next to external links.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>boolean</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-vcs_pageview_mode">
+<span class="sig-name descname"><span class="pre">vcs_pageview_mode</span></span><a class="headerlink" href="#confval-vcs_pageview_mode" title="Permalink to this definition"></a></dt>
+<dd><p>Changes how to view files when using <code class="docutils literal notranslate"><span class="pre">display_github</span></code>, <code class="docutils literal notranslate"><span class="pre">display_gitlab</span></code>,
+etc.  When using GitHub or GitLab this can be: <code class="docutils literal notranslate"><span class="pre">blob</span></code> (default), <code class="docutils literal notranslate"><span class="pre">edit</span></code>,
+or <code class="docutils literal notranslate"><span class="pre">raw</span></code>. On Bitbucket, this can be either: <code class="docutils literal notranslate"><span class="pre">view</span></code> (default) or
+<code class="docutils literal notranslate"><span class="pre">edit</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">blob</span></code> or <code class="docutils literal notranslate"><span class="pre">view</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-style_nav_header_background">
+<span class="sig-name descname"><span class="pre">style_nav_header_background</span></span><a class="headerlink" href="#confval-style_nav_header_background" title="Permalink to this definition"></a></dt>
+<dd><p>Changes the background of the search area in the navigation bar. The value
+can be anything valid in a CSS <cite>background</cite> property.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>string</p>
+</dd>
+<dt class="field-even">Default<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">#2980B9</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+<section id="file-wide-metadata">
+<h2>File-wide metadata<a class="headerlink" href="#file-wide-metadata" title="Permalink to this heading"></a></h2>
+<p>The following options can be used as <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/field-lists.html#metadata" title="(in Sphinx v7.3.0)"><span class="xref std std-ref">file-wide metadata</span></a>:</p>
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-github_url">
+<span class="sig-name descname"><span class="pre">github_url</span></span><a class="headerlink" href="#confval-github_url" title="Permalink to this definition"></a></dt>
+<dd><p>Force the <span class="guilabel">Edit on GitHub</span> button to use the configured URL.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-bitbucket_url">
+<span class="sig-name descname"><span class="pre">bitbucket_url</span></span><a class="headerlink" href="#confval-bitbucket_url" title="Permalink to this definition"></a></dt>
+<dd><p>Force the <span class="guilabel">Edit on Bitbucket</span> button to use the configured URL.</p>
+</dd></dl>
+
+<dl class="std confval">
+<dt class="sig sig-object std" id="confval-gitlab_url">
+<span class="sig-name descname"><span class="pre">gitlab_url</span></span><a class="headerlink" href="#confval-gitlab_url" title="Permalink to this definition"></a></dt>
+<dd><p>Force the <span class="guilabel">Edit on GitLab</span> button to use the configured URL.</p>
+</dd></dl>
+
+</section>
+<section id="other-configuration">
+<h2>Other configuration<a class="headerlink" href="#other-configuration" title="Permalink to this heading"></a></h2>
+<section id="adding-a-logo">
+<h3>Adding a logo<a class="headerlink" href="#adding-a-logo" title="Permalink to this heading"></a></h3>
+<p>Using the Sphinx standard option <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_logo" title="(in Sphinx v7.3.0)"><code class="xref std std-confval docutils literal notranslate"><span class="pre">html_logo</span></code></a>,
+you can set an image file to be used as a logo at the top of the sidebar. The
+theme option <a class="reference internal" href="#confval-logo_only"><code class="xref std std-confval docutils literal notranslate"><span class="pre">logo_only</span></code></a> also allows for <em>only</em> the logo to be shown
+at the top of the sidebar.</p>
+</section>
+<section id="adding-custom-css-or-javascript">
+<h3>Adding custom CSS or Javascript<a class="headerlink" href="#adding-custom-css-or-javascript" title="Permalink to this heading"></a></h3>
+<p>Adding custom CSS or Javascript can help you alter the look and feel of this
+theme without forking the theme for local use.</p>
+<p>In order to add custom CSS or Javascript without disrupting the existing theme
+files, you can <a class="reference external" href="https://docs.readthedocs.io/en/stable/guides/adding-custom-css.html" title="(in Read the Docs user documentation v10.23.1)"><span class="xref std std-doc">add files to be included in your documentation output</span></a>.</p>
+</section>
+</section>
+<section id="how-the-table-of-contents-displays">
+<h2>How the table of contents displays<a class="headerlink" href="#how-the-table-of-contents-displays" title="Permalink to this heading"></a></h2>
+<p>Currently the left menu will build based upon any <code class="docutils literal notranslate"><span class="pre">toctree</span></code> directives defined
+in your source files.  It outputs 4 levels of depth by default, to allow for
+quick navigation through topics. If no TOC trees are defined, Sphinx’s default
+behavior is to use the page headings instead.</p>
+<p>It’s important to note that if you don’t follow the same styling for your reST
+headings across your documents, the TOC tree will build incorrectly, and the
+resulting menu might not show the correct depth when it renders.</p>
+<p>Also note that by default the table of contents is set with
+<code class="docutils literal notranslate"><span class="pre">includehidden=True</span></code>. This allows you to set a hidden TOC in your index file
+with the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html#toctree-directive" title="(in Sphinx v7.3.0)"><span class="xref std std-ref">:hidden:</span></a> property that will allow you
+to build a TOC without it rendering in your index.</p>
+<p>By default, the navigation will “stick” to the screen as you scroll. However if
+your TOC is not tall enough, it will revert to static positioning. To disable the
+sticky navigation altogether, change the <a class="reference internal" href="#confval-sticky_navigation"><code class="xref std std-confval docutils literal notranslate"><span class="pre">sticky_navigation</span></code></a> theme option.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installing.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="development.html" class="btn btn-neutral float-right" title="Development" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Dave Snider, Read the Docs, Inc. &amp; contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+      <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Read the Docs</span>
+        v: latest
+        <span class="fa fa-caret-down"></span>
+      </span>
+      <div class="rst-other-versions">
+        <dl>
+          <dt>Versions</dt>
+            <dd><a href="#">0.1</a></dd>
+            <dd><a href="#">0.2</a></dd>
+            <dd><a href="#">0.3</a></dd>
+            <dd><a href="#">0.4</a></dd>
+            <dd><a href="#">0.5</a></dd>
+            <dd><a href="#">0.6</a></dd>
+            <dd><a href="#">0.7</a></dd>
+            <dd><a href="#">0.8</a></dd>
+            <dd><a href="#">0.9</a></dd>
+            <dd><a href="#">1.0</a></dd>
+            <dd><a href="#">1.1</a></dd>
+            <dd><a href="#">1.2</a></dd>
+            <dd><a href="#">1.3</a></dd>
+            <dd><a href="#">1.4</a></dd>
+            <dd><a href="#">1.5</a></dd>
+            <dd><a href="#">1.6</a></dd>
+            <dd><a href="#">1.7</a></dd>
+            <dd><a href="#">1.8</a></dd>
+            <dd><a href="#">1.9</a></dd>
+            <dd><a href="#">2.0</a></dd>
+            <dd><a href="#">2.1</a></dd>
+            <dd><a href="#">2.2</a></dd>
+            <dd><a href="#">2.3</a></dd>
+            <dd><a href="#">2.4</a></dd>
+            <dd><a href="#">2.5</a></dd>
+            <dd><a href="#">2.6</a></dd>
+            <dd><a href="#">2.7</a></dd>
+            <dd><a href="#">2.8</a></dd>
+            <dd><a href="#">2.9</a></dd>
+            <dd><a href="#">3.0</a></dd>
+            <dd><a href="#">3.1</a></dd>
+            <dd><a href="#">3.2</a></dd>
+            <dd><a href="#">3.3</a></dd>
+            <dd><a href="#">3.4</a></dd>
+            <dd><a href="#">3.5</a></dd>
+            <dd><a href="#">3.6</a></dd>
+            <dd><a href="#">3.7</a></dd>
+            <dd><a href="#">3.8</a></dd>
+            <dd><a href="#">3.9</a></dd>
+            <dd><a href="#">4.0</a></dd>
+            <dd><a href="#">4.1</a></dd>
+            <dd><a href="#">4.2</a></dd>
+            <dd><a href="#">4.3</a></dd>
+            <dd><a href="#">4.4</a></dd>
+            <dd><a href="#">4.5</a></dd>
+            <dd><a href="#">4.6</a></dd>
+            <dd><a href="#">4.7</a></dd>
+            <dd><a href="#">4.8</a></dd>
+            <dd><a href="#">4.9</a></dd>
+            <dd><a href="#">5.0</a></dd>
+            <dd><a href="#">5.1</a></dd>
+            <dd><a href="#">5.2</a></dd>
+            <dd><a href="#">5.3</a></dd>
+            <dd><a href="#">5.4</a></dd>
+            <dd><a href="#">5.5</a></dd>
+            <dd><a href="#">5.6</a></dd>
+            <dd><a href="#">5.7</a></dd>
+            <dd><a href="#">5.8</a></dd>
+            <dd><a href="#">5.9</a></dd>
+            <dd><a href="#">6.0</a></dd>
+            <dd><a href="#">6.1</a></dd>
+            <dd><a href="#">6.2</a></dd>
+            <dd><a href="#">6.3</a></dd>
+            <dd><a href="#">6.4</a></dd>
+            <dd><a href="#">6.5</a></dd>
+            <dd><a href="#">6.6</a></dd>
+            <dd><a href="#">6.7</a></dd>
+            <dd><a href="#">6.8</a></dd>
+            <dd><a href="#">6.9</a></dd>
+            <dd><a href="#">7.0</a></dd>
+            <dd><a href="#">7.1</a></dd>
+            <dd><a href="#">7.2</a></dd>
+            <dd><a href="#">7.3</a></dd>
+            <dd><a href="#">7.4</a></dd>
+            <dd><a href="#">7.5</a></dd>
+            <dd><a href="#">7.6</a></dd>
+            <dd><a href="#">7.7</a></dd>
+            <dd><a href="#">7.8</a></dd>
+            <dd><a href="#">7.9</a></dd>
+            <dd><a href="#">8.0</a></dd>
+            <dd><a href="#">8.1</a></dd>
+            <dd><a href="#">8.2</a></dd>
+            <dd><a href="#">8.3</a></dd>
+            <dd><a href="#">8.4</a></dd>
+            <dd><a href="#">8.5</a></dd>
+            <dd><a href="#">8.6</a></dd>
+            <dd><a href="#">8.7</a></dd>
+            <dd><a href="#">8.8</a></dd>
+            <dd><a href="#">8.9</a></dd>
+            <dd><a href="#">9.0</a></dd>
+            <dd><a href="#">9.1</a></dd>
+            <dd><a href="#">9.2</a></dd>
+            <dd><a href="#">9.3</a></dd>
+            <dd><a href="#">9.4</a></dd>
+            <dd><a href="#">9.5</a></dd>
+            <dd><a href="#">9.6</a></dd>
+            <dd><a href="#">9.7</a></dd>
+            <dd><a href="#">9.8</a></dd>
+            <dd><a href="#">9.9</a></dd>
+        </dl>
+        <dl>
+          <dt>Downloads</dt>
+          <dd><a href="#">PDF</a></dd>
+          <dd><a href="#">ePub</a></dd>
+          <dd><a href="#">HTML</a></dd>
+        </dl>
+        <dl>
+          <dt>On Read the Docs</dt>
+            <dd>
+              <a href="#">Project Home</a>
+            </dd>
+            <dd>
+              <a href="#">Builds</a>
+            </dd>
+        </dl>
+        <dl>
+          <dt>Debug</dt>
+          <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+        </dl>
+      </div>
+    </div>
+
+</body>
+</html>

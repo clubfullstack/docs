@@ -1,0 +1,486 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contributing &mdash; Read the Docs Sphinx Theme 2.0.1alpha1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=d106d1b7"></script>
+      <script src="_static/doctools.js?v=888ff710"></script>
+      <script src="_static/sphinx_highlight.js?v=4825356b"></script>
+      <script src="_static/debug.js?v=63710f7d"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Changelog" href="changelog.html" />
+    <link rel="prev" title="Development" href="development.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo-wordmark-light.svg" class="logo" alt="Logo"/>
+          </a>
+              <div class="version">
+                2.0.1alpha1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Theme Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installing.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuring.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Contributing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#modifying-the-theme">Modifying the theme</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#set-up-your-environment">Set up your environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#making-changes">Making changes</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#dockerized-development">Dockerized development</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing">Testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#translations">Translations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#versioning">Versioning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#releasing-the-theme">Releasing the theme</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Demo Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html">1. Structural Elements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/structure.html#structural-elements-2">2. Structural Elements 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/demo.html">3. Paragraph Level Markup</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/lists_tables.html">4. Lists &amp; Tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="demo/api.html">5. API documentation and generated content</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">This is an incredibly long caption for a long menu</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/long.html">1. Long Sticky Nav</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Breadcrumbs</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="demo/level1/index.html">Breadcrumb Level 1</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Read the Docs Sphinx Theme</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Contributing</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/contributing.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="contributing">
+<h1>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading"></a></h1>
+<p>This project follows the Read the Docs <a class="reference external" href="https://dev.readthedocs.io/en/stable/code-of-conduct.html" title="(in Read the Docs developer documentation v10.23.1)"><span class="xref std std-doc">code of conduct</span></a>. If you are not familiar with our code of conduct policy,
+take a minute to read the policy before starting with your first contribution.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>There is a new dockerized build environment, see <a class="reference internal" href="#dockerized-build"><span class="std std-ref">Dockerized development</span></a>.</p>
+</div>
+<section id="modifying-the-theme">
+<h2>Modifying the theme<a class="headerlink" href="#modifying-the-theme" title="Permalink to this heading"></a></h2>
+<p>The styles for this theme use <a class="reference external" href="http://www.sass-lang.com">SASS</a> and a custom CSS framework called <a class="reference external" href="http://www.github.com/snide/wyrm/">Wyrm</a>. We
+use <a class="reference external" href="https://webpack.js.org/">Webpack</a> and <a class="reference external" href="https://github.com/sass/node-sass">node-sass</a> to build the CSS. <a class="reference external" href="https://webpack.js.org/">Webpack</a> is used to watch for
+changes, rebuild the static assets, and rebuild the Sphinx demo documentation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The installation of Node is outside the scope of this documentation. You
+will need Node version 10+ in order to make changes to this theme.</p>
+</div>
+<section id="set-up-your-environment">
+<h3>Set up your environment<a class="headerlink" href="#set-up-your-environment" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Install <a class="reference external" href="http://www.sphinx-doc.org/en/stable/">Sphinx</a> and documentation build dependencies.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;.[dev]&#39;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install <a class="reference external" href="https://webpack.js.org/">Webpack</a>, <a class="reference external" href="https://github.com/sass/node-sass">node-sass</a>, and theme dependencies locally.</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>npm<span class="w"> </span>install
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="making-changes">
+<h3>Making changes<a class="headerlink" href="#making-changes" title="Permalink to this heading"></a></h3>
+<p>Changes to the theme can be compiled and tested with <a class="reference external" href="https://webpack.js.org/">Webpack</a>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>npm<span class="w"> </span>run<span class="w"> </span>dev
+</pre></div>
+</div>
+<p>This script will do the following:</p>
+<ol class="arabic simple">
+<li><p>Install and update any dependencies.</p></li>
+<li><p>Build the static CSS from SASS source files.</p></li>
+<li><p>Build the demo documentation.</p></li>
+<li><p>Watch for changes to the SASS files and documentation and rebuild everything
+on any detected changes.</p></li>
+</ol>
+<p>Alternatively, if you don’t need to watch the files, the release build script
+can be used to test built assets:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>npm<span class="w"> </span>run<span class="w"> </span>build
+</pre></div>
+</div>
+</section>
+</section>
+<section id="dockerized-development">
+<span id="dockerized-build"></span><h2>Dockerized development<a class="headerlink" href="#dockerized-development" title="Permalink to this heading"></a></h2>
+<p>If you have Docker available on your platform, you can get started building CSS and JS artifacts a bit faster and won’t have to worry about any of the setup spilling over into your general environment.</p>
+<p>When building with Docker, we create an image containing the build dependencies. Some of these are quite outdated and therefore ideal to isolate a container. The image is tagged as <code class="docutils literal notranslate"><span class="pre">sphinx_rtd_theme:latest</span></code>.</p>
+<p>Inside the running docker image, we mount the working copy of the repository, build the artifacts and finally observe that the artifacts have been built and left in your current git checkout.</p>
+<p>Use the following steps:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Builds<span class="w"> </span>an<span class="w"> </span>updated<span class="w"> </span>version<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>docker<span class="w"> </span>image
+<span class="gp">$ </span>docker-compose<span class="w"> </span>build
+
+<span class="gp"># </span>Runs<span class="w"> </span>the<span class="w"> </span>development<span class="w"> </span>webserver
+<span class="gp">$ </span>docker-compose<span class="w"> </span>run<span class="w"> </span>sphinx_rtd_theme<span class="w"> </span>dev
+
+<span class="gp"># </span>If<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>copy<span class="w"> </span>stuff<span class="w"> </span>out<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>Docker<span class="w"> </span>environment,<span class="w"> </span>run<span class="w"> </span>this<span class="w"> </span>make
+<span class="gp"># </span>target<span class="w"> </span>or<span class="w"> </span><span class="nb">read</span><span class="w"> </span>the<span class="w"> </span>actual<span class="w"> </span>Makefile<span class="w"> </span>to<span class="w"> </span>see<span class="w"> </span>what<span class="w"> </span>is<span class="w"> </span>going<span class="w"> </span>on.
+<span class="gp"># </span>We<span class="w"> </span>suggest<span class="w"> </span>running<span class="w"> </span>this<span class="w"> </span><span class="nb">command</span><span class="w"> </span>every<span class="w"> </span><span class="nb">time</span><span class="w"> </span>that<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>quickly<span class="w"> </span>build
+<span class="gp"># </span>new<span class="w"> </span>CSS/JS<span class="w"> </span>assets
+<span class="gp">$ </span>make<span class="w"> </span>docker-build-all
+</pre></div>
+</div>
+<p>Every time you change the Node or Python requirements, you will need to rebuild images with <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">run</span> <span class="pre">sphinx_rtd_theme</span> <span class="pre">build</span></code>. If you change SASS or JS, you will need to rebuild assets.</p>
+</section>
+<section id="testing">
+<h2>Testing<a class="headerlink" href="#testing" title="Permalink to this heading"></a></h2>
+<p>QA testing theme changes and pull requests is complex, due to backwards
+compatibility.</p>
+<p>The following cases need to be tested with changes to CSS or JavaScript:</p>
+<ul class="simple">
+<li><p>Multiple, modern browsers should be tested.</p></li>
+<li><p>Multiple viewport sizes should be tested for changes.
+We support large, tablet, and mobile viewport sizes</p></li>
+<li><p>We currently support only HTML5 writer.</p></li>
+<li><p>Multiple major versions of Sphinx should be tested.
+We currently support Sphinx <code class="docutils literal notranslate"><span class="pre">&gt;=5.0</span></code></p></li>
+</ul>
+<p>It’s easiest to test combinations of dependency versions using <code class="docutils literal notranslate"><span class="pre">tox</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">% </span>tox<span class="w"> </span>-e<span class="w"> </span>py310-sphinx62
+</pre></div>
+</div>
+<p>If the tests and build are successful, you can view the built documentation at
+the directory noted by Sphinx:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">build succeeded, 10 warnings.</span>
+
+<span class="go">The HTML pages are in .tox/py310-sphinx62/tmp/html.</span>
+<span class="go">___________________________ summary ___________________________</span>
+<span class="go">  py310-sphinx62: commands succeeded</span>
+<span class="go">  congratulations :)</span>
+</pre></div>
+</div>
+<p>You can then open up this path with a series of browsers to test.</p>
+<p>The best way to spot UI issues is to compare two or more builds. You can build
+multiple <code class="docutils literal notranslate"><span class="pre">tox</span></code> environments, and open both up for comparison:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">% </span>tox<span class="w"> </span>-e<span class="w"> </span>py310-sphinx62
+<span class="go">...</span>
+<span class="gp">% </span>tox<span class="w"> </span>-e<span class="w"> </span>py310-sphinx53
+<span class="go">...</span>
+<span class="gp">% </span>firefox<span class="w"> </span>.tox/py310-sphinx62/tmp/html/index.html
+<span class="gp">% </span>firefox<span class="w"> </span>.tox/py310-sphinx53/tmp/html/index.html
+</pre></div>
+</div>
+<p>You can also use a separate <code class="docutils literal notranslate"><span class="pre">tox</span></code> environment for building output to compare
+against. All of the <code class="docutils literal notranslate"><span class="pre">tox</span></code> environments have an additional postfix, <code class="docutils literal notranslate"><span class="pre">-qa</span></code>, to
+allow building the same environment twice, without overwriting any files. In
+this test scenario, you would build from a branch or tag before building the
+same <code class="docutils literal notranslate"><span class="pre">tox</span></code> environment for the pull request branch you are testing.</p>
+<p>For example, to test against the tag <code class="docutils literal notranslate"><span class="pre">0.5.2</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">% </span>git<span class="w"> </span>checkout<span class="w"> </span><span class="m">0</span>.5.2
+<span class="gp">% </span>tox<span class="w"> </span>-e<span class="w"> </span>py310-sphinx53-qa
+<span class="go">...</span>
+<span class="gp">% </span>git<span class="w"> </span>checkout<span class="w"> </span>feature/example-pull-request
+<span class="gp">% </span>tox<span class="w"> </span>-e<span class="w"> </span>py310-sphinx53
+<span class="go">...</span>
+<span class="gp">% </span>firefox<span class="w"> </span>.tox/py310-sphinx53-qa/tmp/html/index.html
+<span class="gp">% </span>firefox<span class="w"> </span>.tox/py310-sphinx53/tmp/html/index.html
+</pre></div>
+</div>
+<p>Currently, the most important environments to QA are:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">py310-sphinx53</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">py310-sphinx62</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">py310-sphinx72</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">py310-sphinxlatest</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">py310-sphinxdev</span></code></p></li>
+</ul>
+</section>
+<section id="translations">
+<h2>Translations<a class="headerlink" href="#translations" title="Permalink to this heading"></a></h2>
+<p>Translations are managed using <a class="reference external" href="https://www.transifex.com/readthedocs/sphinx-rtd-theme">Transifex</a>. You can join any of the existing
+language teams or request a new language is added to the project. For more
+information on our translation standards, see our docs on
+<a class="reference external" href="https://dev.readthedocs.io/en/stable/i18n.html" title="(in Read the Docs developer documentation v10.23.1)"><span>Internationalization</span></a></p>
+<p>Periodically, core team should update the translation files outside our normal
+releases. Someone from the core team, with write access to Transifex, should run
+the following:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>python<span class="w"> </span>setup.py<span class="w"> </span>update_translations
+</pre></div>
+</div>
+<p>This will extract new messages, upload the messages to Transifex, and will
+update our local translation files. Changes can be checked in to a branch and
+put up for review.</p>
+</section>
+<section id="versioning">
+<h2>Versioning<a class="headerlink" href="#versioning" title="Permalink to this heading"></a></h2>
+<p>In between releases, the package version specified will always be a alpha
+release, matching <code class="docutils literal notranslate"><span class="pre">1.1.1alpha1</span></code>.</p>
+<p>As pull requests are merged and the release impact changes, this version will
+incremented ahead of release. For example, if we merge a new feature pull
+request, we’d run <code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">minor</span></code> to increment <code class="docutils literal notranslate"><span class="pre">1.1.1alpha1</span></code> to
+<code class="docutils literal notranslate"><span class="pre">1.2.0alpha1</span></code>.</p>
+<p>To put out a release for testing, we will upload a release candidate. We would
+run <code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">release</span></code> to increment <code class="docutils literal notranslate"><span class="pre">1.2.0alpha1</span></code> to <code class="docutils literal notranslate"><span class="pre">1.2.0rc1</span></code>.</p>
+<p>After a testing period, the release candidate can become a full release. We
+would run <code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">release</span></code> again to increment <code class="docutils literal notranslate"><span class="pre">1.2.0rc1</span></code> to <code class="docutils literal notranslate"><span class="pre">1.2.0</span></code>.</p>
+<p>After the release process below, we increment the version again, so that the
+development version – the version found in the repository – is always greater
+than the most recent release. We follow up with another pull request by running
+<code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">patch</span></code>, which increments <code class="docutils literal notranslate"><span class="pre">1.2.0</span></code> to <code class="docutils literal notranslate"><span class="pre">1.2.1alpha1</span></code>.</p>
+</section>
+<section id="releasing-the-theme">
+<h2>Releasing the theme<a class="headerlink" href="#releasing-the-theme" title="Permalink to this heading"></a></h2>
+<p>To release a new version of the theme, core team will take the following steps:</p>
+<ol class="arabic">
+<li><p>Bump the version by running <code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">[major|minor|patch|dev]</span></code>.
+This will automatically increase the correct part(s) of the version number,
+you do not need to specify the exact version number.
+We follow <a class="reference external" href="http://semver.org/">semantic versioning</a> and <a class="reference external" href="https://www.python.org/dev/peps/pep-0440/">PEP440</a>
+(with regards to alpha release and development versions). The version
+increment should reflect these releases and any potentially breaking changes.</p></li>
+<li><p>New versions are by default <code class="docutils literal notranslate"><span class="pre">alpha</span></code> releases. If this is a release candidate,
+run <code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">--allow-dirty</span> <span class="pre">release</span></code> to update the release to an <code class="docutils literal notranslate"><span class="pre">rc</span></code>
+release. If this is a final release, run the command again.</p></li>
+<li><p>Update the changelog (<code class="docutils literal notranslate"><span class="pre">docs/changelog.rst</span></code>) with the version information.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">update_translations</span></code> to compile new translation files
+and update Transifex.</p></li>
+<li><p>Run <code class="docutils literal notranslate"><span class="pre">npm</span> <span class="pre">install</span> <span class="pre">&amp;&amp;</span> <span class="pre">npm</span> <span class="pre">run</span> <span class="pre">build</span></code> to rebuild all the theme assets,
+notice that <code class="docutils literal notranslate"><span class="pre">package-lock.json</span></code> will be updated with a new package
+version. But take care that it isn’t also bumping versions of dependencies
+in ways that are risky to the release. <em>If</em> <code class="docutils literal notranslate"><span class="pre">package-lock.json</span></code> changes, you
+need to commit it to git and tag it together with your release.</p></li>
+<li><p>Commit these changes to a pull request.</p></li>
+<li><p>Merge the pull request after review.</p></li>
+<li><p>Check out <code class="docutils literal notranslate"><span class="pre">master</span></code> branch locally for tagging. <strong>Remember to pull from remote</strong>.</p></li>
+<li><p>Tag the release in git: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">tag</span> <span class="pre">-s</span> <span class="pre">$NEW_VERSION</span></code>.</p></li>
+<li><p>Push the tag to GitHub: <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">--tags</span> <span class="pre">origin</span></code>.</p></li>
+<li><p>Upload the package to PyPI:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>rm<span class="w"> </span>-rf<span class="w"> </span>dist/
+<span class="gp">$ </span>python<span class="w"> </span>setup.py<span class="w"> </span>sdist<span class="w"> </span>bdist_wheel
+<span class="gp">$ </span>twine<span class="w"> </span>upload<span class="w"> </span>--sign<span class="w"> </span>--identity<span class="w"> </span>security@readthedocs.org<span class="w"> </span>dist/*
+</pre></div>
+</div>
+</li>
+<li><p>Finally, open a new pull request updating the development release version to
+the next patch by running <code class="docutils literal notranslate"><span class="pre">bump2version</span> <span class="pre">patch</span></code>. Open a pull request with
+this change. See <a class="reference internal" href="#versioning">Versioning</a> above for more details.</p></li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="development.html" class="btn btn-neutral float-left" title="Development" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Dave Snider, Read the Docs, Inc. &amp; contributors.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="Versions">
+      <span class="rst-current-version" data-toggle="rst-current-version">
+        <span class="fa fa-book"> Read the Docs</span>
+        v: latest
+        <span class="fa fa-caret-down"></span>
+      </span>
+      <div class="rst-other-versions">
+        <dl>
+          <dt>Versions</dt>
+            <dd><a href="#">0.1</a></dd>
+            <dd><a href="#">0.2</a></dd>
+            <dd><a href="#">0.3</a></dd>
+            <dd><a href="#">0.4</a></dd>
+            <dd><a href="#">0.5</a></dd>
+            <dd><a href="#">0.6</a></dd>
+            <dd><a href="#">0.7</a></dd>
+            <dd><a href="#">0.8</a></dd>
+            <dd><a href="#">0.9</a></dd>
+            <dd><a href="#">1.0</a></dd>
+            <dd><a href="#">1.1</a></dd>
+            <dd><a href="#">1.2</a></dd>
+            <dd><a href="#">1.3</a></dd>
+            <dd><a href="#">1.4</a></dd>
+            <dd><a href="#">1.5</a></dd>
+            <dd><a href="#">1.6</a></dd>
+            <dd><a href="#">1.7</a></dd>
+            <dd><a href="#">1.8</a></dd>
+            <dd><a href="#">1.9</a></dd>
+            <dd><a href="#">2.0</a></dd>
+            <dd><a href="#">2.1</a></dd>
+            <dd><a href="#">2.2</a></dd>
+            <dd><a href="#">2.3</a></dd>
+            <dd><a href="#">2.4</a></dd>
+            <dd><a href="#">2.5</a></dd>
+            <dd><a href="#">2.6</a></dd>
+            <dd><a href="#">2.7</a></dd>
+            <dd><a href="#">2.8</a></dd>
+            <dd><a href="#">2.9</a></dd>
+            <dd><a href="#">3.0</a></dd>
+            <dd><a href="#">3.1</a></dd>
+            <dd><a href="#">3.2</a></dd>
+            <dd><a href="#">3.3</a></dd>
+            <dd><a href="#">3.4</a></dd>
+            <dd><a href="#">3.5</a></dd>
+            <dd><a href="#">3.6</a></dd>
+            <dd><a href="#">3.7</a></dd>
+            <dd><a href="#">3.8</a></dd>
+            <dd><a href="#">3.9</a></dd>
+            <dd><a href="#">4.0</a></dd>
+            <dd><a href="#">4.1</a></dd>
+            <dd><a href="#">4.2</a></dd>
+            <dd><a href="#">4.3</a></dd>
+            <dd><a href="#">4.4</a></dd>
+            <dd><a href="#">4.5</a></dd>
+            <dd><a href="#">4.6</a></dd>
+            <dd><a href="#">4.7</a></dd>
+            <dd><a href="#">4.8</a></dd>
+            <dd><a href="#">4.9</a></dd>
+            <dd><a href="#">5.0</a></dd>
+            <dd><a href="#">5.1</a></dd>
+            <dd><a href="#">5.2</a></dd>
+            <dd><a href="#">5.3</a></dd>
+            <dd><a href="#">5.4</a></dd>
+            <dd><a href="#">5.5</a></dd>
+            <dd><a href="#">5.6</a></dd>
+            <dd><a href="#">5.7</a></dd>
+            <dd><a href="#">5.8</a></dd>
+            <dd><a href="#">5.9</a></dd>
+            <dd><a href="#">6.0</a></dd>
+            <dd><a href="#">6.1</a></dd>
+            <dd><a href="#">6.2</a></dd>
+            <dd><a href="#">6.3</a></dd>
+            <dd><a href="#">6.4</a></dd>
+            <dd><a href="#">6.5</a></dd>
+            <dd><a href="#">6.6</a></dd>
+            <dd><a href="#">6.7</a></dd>
+            <dd><a href="#">6.8</a></dd>
+            <dd><a href="#">6.9</a></dd>
+            <dd><a href="#">7.0</a></dd>
+            <dd><a href="#">7.1</a></dd>
+            <dd><a href="#">7.2</a></dd>
+            <dd><a href="#">7.3</a></dd>
+            <dd><a href="#">7.4</a></dd>
+            <dd><a href="#">7.5</a></dd>
+            <dd><a href="#">7.6</a></dd>
+            <dd><a href="#">7.7</a></dd>
+            <dd><a href="#">7.8</a></dd>
+            <dd><a href="#">7.9</a></dd>
+            <dd><a href="#">8.0</a></dd>
+            <dd><a href="#">8.1</a></dd>
+            <dd><a href="#">8.2</a></dd>
+            <dd><a href="#">8.3</a></dd>
+            <dd><a href="#">8.4</a></dd>
+            <dd><a href="#">8.5</a></dd>
+            <dd><a href="#">8.6</a></dd>
+            <dd><a href="#">8.7</a></dd>
+            <dd><a href="#">8.8</a></dd>
+            <dd><a href="#">8.9</a></dd>
+            <dd><a href="#">9.0</a></dd>
+            <dd><a href="#">9.1</a></dd>
+            <dd><a href="#">9.2</a></dd>
+            <dd><a href="#">9.3</a></dd>
+            <dd><a href="#">9.4</a></dd>
+            <dd><a href="#">9.5</a></dd>
+            <dd><a href="#">9.6</a></dd>
+            <dd><a href="#">9.7</a></dd>
+            <dd><a href="#">9.8</a></dd>
+            <dd><a href="#">9.9</a></dd>
+        </dl>
+        <dl>
+          <dt>Downloads</dt>
+          <dd><a href="#">PDF</a></dd>
+          <dd><a href="#">ePub</a></dd>
+          <dd><a href="#">HTML</a></dd>
+        </dl>
+        <dl>
+          <dt>On Read the Docs</dt>
+            <dd>
+              <a href="#">Project Home</a>
+            </dd>
+            <dd>
+              <a href="#">Builds</a>
+            </dd>
+        </dl>
+        <dl>
+          <dt>Debug</dt>
+          <dd><a href="#" data-toggle="rst-debug-badge">Swap badge position</a></dd>
+        </dl>
+      </div>
+    </div>
+
+</body>
+</html>
