@@ -1,0 +1,10 @@
+*******************
+Projeto Gym 2024-01
+*******************
+
+Título: Visão do Negócio
+=========================
+
+Para organizações e profissionais que trabalham com mentoria em áreas como artes ou esportes, há uma crescente importância em adotar práticas de consultoria digital. Isso envolve usar diferentes ferramentas e recursos para oferecer orientação a conteúdos de qualidade aos alunos, unindo mentoria de ensino com tecnologias inovadoras.
+
+O **Projeto Gym 2024-01** é uma novidade tecnológica que visa criar uma plataforma para aproximar profissionais mentores de alunos, mesmo que eles não tenham espaços físicos para isso. A ideia é que esses profissionais possam oferecer seus métodos de ensino de forma acessível, usando as novas tecnologias digitais.

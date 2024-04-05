@@ -1,0 +1,25 @@
+Documentação Clube Digital
+==========================
+
+Seja bem-vindo à nossa jornada de aprendizado coletivo!
+=======================================================
+
+No **Clube Digital Full Stack**, temos como missão criar uma jornada de aprendizado coletivo dentro dos principais tópicos de aprendizado do desenvolvimento de software. A nossa visão para esse coletivo traz conteúdos práticos envolvendo materiais facilitados por desenvolvedores experientes.
+
+Nossa jornada começou com um time de desenvolvedores determinados a aprimorar seus conhecimentos e construir um portfólio excepcional. Movidos pela vontade de aprender juntos, mergulhamos em discussões, compartilhamos projetos e exploramos temas promissores. E assim, nasceu o nosso primeiro projeto: o **Gym 2024-01**.
+
+Utilizaremos como base nesse início da gestação da plataforma esse projeto para praticarmos juntos e envolver os diferentes temas de desenvolvimento de software.
+
+Imagine uma plataforma que vai além do convencional. No **Gym 2024-01**, a tecnologia se une à mentoria para reinventar a forma como aprendemos e nos exercitamos. Profissionais mentores e alunos, conectados virtualmente, exploram juntos novos domínios tecnológicos e alcançam novos patamares de conhecimento e habilidade.
+
+Em nossa jornada de desenvolvimento, demos vida ao **Artefato de Visão do negócio**, estabelecendo as bases para o sucesso do nosso projeto. Este documento não apenas simula as necessidades do cliente, mas também define as regras iniciais que guiarão nosso caminho rumo à excelência.
+
+Agora, estamos aqui para compartilhar nossos aprendizados com você, querido desenvolvedor que busca crescimento e colaboração. Se você se identifica com nossa missão de criar um ambiente de aprendizado coletivo, junte-se a nós! Deixe uma mensagem e vamos explorar juntos as possibilidades infinitas da tecnologia.
+
+**Seja parte da nossa comunidade**, onde o conhecimento é construído em conjunto e o futuro é moldado por mentes inovadoras como a sua!
+
+Estamos ansiosos para recebê-lo
+===============================
+
+
+    demo/level1/index.rst
