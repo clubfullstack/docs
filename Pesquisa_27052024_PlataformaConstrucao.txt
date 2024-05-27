@@ -1,0 +1,364 @@
+
+
+Arquitetura de Software de Alto Nível
+A arquitetura de alto nível para o sistema SCADA utilizando o framework Factory Studio e a base de dados temporal Canary pode ser representada como um conjunto de componentes principais, cada um com responsabilidades específicas, organizados em camadas de acordo com o padrão MVC (Model-View-Controller). Aqui está uma visão geral desses componentes:
+
+Interface do Usuário (View):
+
+HMI para visualização dos dados em tempo real.
+Tela de supervisão e controle.
+Tela de configuração de alarmes e logs de eventos.
+Tela de visualização gráfica de dados históricos.
+Tela de exportação de dados históricos.
+Tela de redundância.
+Controlador (Controller):
+
+API de comunicação via MODBUS e OPC-UA.
+Controladores para manipulação dos dados de entrada e saída.
+Serviços de integração com banco de dados e sistemas externos.
+Modelo (Model):
+
+Base de dados temporal (Canary) para armazenamento de dados em tempo real.
+Base de dados de alarmes, logs e histórico de acessos.
+Lógica de negócios para gestão de dados e alarmes.
+
+JSON Representando a Estrutura de Alto Nível
+
+json
+Copiar código
+{
+  "system": {
+    "view": {
+      "HMI": [
+        "Tela de Supervisão",
+        "Tela de Controle",
+        "Tela de Configuração de Alarmes",
+        "Tela de Logs de Eventos",
+        "Tela de Exportação de Dados",
+        "Tela de Visualização Gráfica de Dados",
+        "Tela de Redundância"
+      ]
+    },
+    "controller": {
+      "API": {
+        "communication": ["MODBUS", "OPC-UA"],
+        "services": [
+          "Integração com Banco de Dados",
+          "Interface com Sistemas Externos"
+        ]
+      }
+    },
+    "model": {
+      "databases": [
+        "Base de Dados Temporal (Canary)",
+        "Base de Dados de Alarmes",
+        "Base de Dados de Logs de Eventos",
+        "Base de Dados de Histórico de Acessos"
+      ],
+      "logic": [
+        "Gestão de Dados em Tempo Real",
+        "Gestão de Alarmes e Eventos",
+        "Controle de Redundância"
+      ]
+    }
+  }
+}
+Arquitetura de Software Detalhada
+Para uma visão mais detalhada, vamos definir as interações e fluxos de informações entre os componentes do sistema, ainda seguindo o padrão MVC.
+
+json
+Copiar código
+{
+  "system": {
+    "view": {
+      "HMI": {
+        "Tela de Supervisão": {
+          "displays": ["Parâmetros da EPU", "Condições do Modem", "Parâmetros do SCM COMP"]
+        },
+        "Tela de Controle": {
+          "actions": ["Comandos para SCM-CPU", "Comandos para Modbus/TCP Client"]
+        },
+        "Tela de Configuração de Alarmes": {
+          "settings": ["Níveis de Alarmes", "Parâmetros de Alarmes"]
+        },
+        "Tela de Logs de Eventos": {
+          "logs": ["Alarmes", "Falhas", "Eventos"]
+        },
+        "Tela de Exportação de Dados": {
+          "formats": ["JSON", "CSV"]
+        },
+        "Tela de Visualização Gráfica de Dados": {
+          "charts": ["Tendências", "Históricos"]
+        },
+        "Tela de Redundância": {
+          "status": ["CPU Primária", "CPU Secundária"]
+        }
+      }
+    },
+    "controller": {
+      "API": {
+        "communication": {
+          "MODBUS": {
+            "interfaces": ["EPU", "SCM-CPU"]
+          },
+          "OPC-UA": {
+            "standardizes": ["MODBUS Data"],
+            "connects": ["Factory Studio"]
+          }
+        },
+        "services": {
+          "Banco de Dados": {
+            "store": ["Tempo Real", "Alarmes", "Logs de Eventos", "Histórico de Acessos"]
+          },
+          "Sistemas Externos": {
+            "provide": ["OPC-UA Server Interface"]
+          }
+        }
+      },
+      "control_logic": {
+        "Gestão de Dados": {
+          "store": ["Dados em Tempo Real", "Histórico de Dados"]
+        },
+        "Gestão de Alarmes": {
+          "handle": ["Alarmes", "Notificações", "Logs de Eventos"]
+        },
+        "Controle de Redundância": {
+          "monitor": ["Estado das CPUs", "Alternância de Operação"]
+        }
+      }
+    },
+    "model": {
+      "databases": {
+        "Base de Dados Temporal (Canary)": {
+          "store": ["Dados em Tempo Real", "Histórico de Dados"]
+        },
+        "Base de Dados de Alarmes": {
+          "log": ["Alarmes Atuais", "Histórico de Alarmes"]
+        },
+        "Base de Dados de Logs de Eventos": {
+          "log": ["Eventos do Sistema", "Falhas"]
+        },
+        "Base de Dados de Histórico de Acessos": {
+          "log": ["Acessos de Usuários", "Atividades"]
+        }
+      }
+    }
+  }
+}
+
+Fluxo de Informações Detalhado
+Entrada de Dados:
+
+Equipamentos Físicos enviam dados via MODBUS.
+API comunica esses dados para o OPC-UA Server.
+Processamento de Dados:
+
+OPC-UA Server padroniza e disponibiliza os dados para o Factory Studio.
+Factory Studio armazena os dados em tempo real na Base de Dados Temporal (Canary).
+Visualização e Controle:
+
+HMI exibe dados em tempo real e históricos.
+Usuários interagem com a Tela de Controle para enviar comandos ao SCM-CPU via MODBUS/TCP Client.
+Gestão de Alarmes e Eventos:
+
+Tela de Configuração de Alarmes permite aos usuários definir níveis de alarme.
+Sistema de Alarmes monitora os dados e registra eventos na Base de Dados de Alarmes.
+Tela de Logs de Eventos exibe alarmes e falhas.
+Exportação e Integração:
+
+Tela de Exportação de Dados permite exportar históricos em formatos como JSON.
+OPC-UA Server fornece dados a sistemas externos do cliente.
+Redundância e Manutenção:
+
+Tela de Redundância exibe o status das CPUs e permite alternar entre elas.
+
+JSON Representando a Interdependência dos Serviços
+
+json
+Copiar código
+{
+  "system": {
+    "view": {
+      "HMI": {
+        "Tela de Supervisão": {
+          "depends_on": [
+            "API.MODBUS",
+            "API.OPC-UA",
+            "Database.Canary"
+          ]
+        },
+        "Tela de Controle": {
+          "depends_on": [
+            "API.MODBUS",
+            "Controller.Services.Banco de Dados"
+          ]
+        },
+        "Tela de Configuração de Alarmes": {
+          "depends_on": [
+            "Controller.Control_Logic.Gestão de Alarmes"
+          ]
+        },
+        "Tela de Logs de Eventos": {
+          "depends_on": [
+            "Database.Alarmes",
+            "Database.Logs de Eventos"
+          ]
+        },
+        "Tela de Exportação de Dados": {
+          "depends_on": [
+            "Database.Canary",
+            "Database.Logs de Eventos"
+          ]
+        },
+        "Tela de Visualização Gráfica de Dados": {
+          "depends_on": [
+            "Database.Canary"
+          ]
+        },
+        "Tela de Redundância": {
+          "depends_on": [
+            "Controller.Control_Logic.Controle de Redundância"
+          ]
+        }
+      }
+    },
+    "controller": {
+      "API": {
+        "MODBUS": {
+          "interfaces": [
+            "EPU",
+            "SCM-CPU"
+          ]
+        },
+        "OPC-UA": {
+          "standardizes": [
+            "MODBUS Data"
+          ],
+          "connects": [
+            "Factory Studio"
+          ]
+        }
+      },
+      "services": {
+        "Banco de Dados": {
+          "store": [
+            "Database.Canary",
+            "Database.Alarmes",
+            "Database.Logs de Eventos",
+            "Database.Histórico de Acessos"
+          ]
+        },
+        "Sistemas Externos": {
+          "provide": [
+            "OPC-UA Server Interface"
+          ]
+        }
+      },
+      "control_logic": {
+        "Gestão de Dados": {
+          "store": [
+            "Database.Canary",
+            "Database.Histórico de Dados"
+          ]
+        },
+        "Gestão de Alarmes": {
+          "handle": [
+            "Database.Alarmes",
+            "Database.Logs de Eventos"
+          ]
+        },
+        "Controle de Redundância": {
+          "monitor": [
+            "CPU Primária",
+            "CPU Secundária"
+          ]
+        }
+      }
+    },
+    "model": {
+      "databases": {
+        "Base de Dados Temporal (Canary)": {
+          "store": [
+            "Dados em Tempo Real",
+            "Histórico de Dados"
+          ]
+        },
+        "Base de Dados de Alarmes": {
+          "log": [
+            "Alarmes Atuais",
+            "Histórico de Alarmes"
+
+------------- TEXTO FORNECIDO SOBRE REQUISITOS DO PROJETO ----
+
+Proponha a estruturação de uma arquitetura de software para um projeto de supervisório SCADA utilizando framework tatsoft e base de dados temporal Canary, assim como uma API para interface dos dados reais coletados de equipamento. A arquitetura de software deve proporcionar uma visão alto nível dos principais elementos do sistema, uma segunda arquitetura deve possuir um maior detalhamento considerando o fluxo de informações, considere um modelo em camadas (MVC). Para demonstração e auxiliar na construção, faça essa representação utilizando linguagem .JSON para encadeiamento das relações entre os elementos da interface, ou seja a interdependencia existente entre os serviços.
+
+A princípio o sistema será composto dos seguintes elementos:
+
+1) Permitir a supervisão dos parâmetros da EPU (tensão, corrente e potência), bem 
+como o monitoramento das condições (temperatura, falhas de aterramento, etc.), do status 
+do modem (taxas de erro, status TX/RX, etc.) e monitoramento de parâmetros do SCM
+COMP da unidade submarina (tensões de alimentação, corrente, potência, temperatura e 
+níveis de vibração) - estes são os equipamentos físicos existentes;
+
+2) API fornecida pelos desenvolvedores de software que comunica via MODBUS e padroniza em OPC-UA para conexão com o software Factory Studio;
+
+3) Configuração de Alarmes de falha e Logs de eventos - serviço integrado ao SCADA;
+
+4) Interface HMI para visualização dos dados em tempo real, assim como possibilidade de armazenamento em base de dados temporal - Canary;
+
+5) Uma base de dados temporal Canary com dados reais dos equipamentos;
+
+6) Base de dados com os dados de alarmes, logs de falha e também histórico de acesso dos usuários;
+
+7) Na tela de supervisão, HMI serão representado os dados tanto da EPU que trata-se de um gabinete de interface entre o equipamento que fica no fundo do mar: "SICOMP";
+
+8) No gabinete EPU em solo, ficam disponibeis, módulos de interface, modens, EPU, CPU, medidores de tensão, potencia e interfaces com rede de cliente externa, KVM;
+
+9) No supervisório deve também existir uma segunda interface para controle externo, ou seja, será fornecido uma porta OPC-UA server para ser consumida por um controlador do cliente - esse serviço deve permitir parametrização dos sinais;
+
+10) Uma tela que permita parametrização dos níveis de alarmes;
+
+11) Uma tela que realize log de alarmes, falhas e eventos;
+
+12) Uma tela que possibita a exportação dos dados históricos em formato padronizado por exemplo .json para ser consumido por outras aplicações;
+
+13) Uma tela de visualização gráfica dos dados históricos;
+
+14) No nivel de controle: SCS Control Software será composto por:
+     - SCS-CPU Control Management: Power Supply e Sistema de Controle de Redundancia;
+ 
+15) Modbus/TCP Client: i) possibilita armazenar dados do SCM-CPU; ii) Também possibilita enviar comandos de controle para SCM-CPU; 
+
+16) OPC Server: Permite receber dados de comando do IWCS e também fornece SCM-CPU data para HMI- Cliente OPC;
+
+17) O SCM HMI Software: Possui um Cliente OPC que possibilita armazenar os dados do SCS software de controle e também do IWCS OPC Server
+
+18) Interface Display de dados UI SCADA que possibilita realizar interface com API OPC Cliente  de controle e também faz interface com OPC Cliente 2 para armazenamento dos dados do sistema UEP;
+
+19) OPC Cliente 2: armazena dados do sistema UEP;
+
+20) OPC Server: providencia os dados para envio ao Sistema UEP;
+
+21) Banco de Dados: Deve possuir uma base de dados para dados em tempo real temporal, ii) uma base de dados para alarmes, iii) uma base de dados para logs dos usuários. iv) Base de Dados para Event Log;
+
+22) Interface para realizar acesso aos dados das bases de dados;
+
+23) Um cliente OPC que possibilite interfacear com sistemas externos do cliente;
+
+24) Mencionar as telas que devem compor esse sistema para apresentação dos dados de forma intuitiva ao usuário;
+
+25) Tela de gráfico de tendencia, sistemas de alarmes e logs de eventos;
+
+26) Disponibilização tela de configuração e comando de acionamento dos componentes 
+do sistema ao usuário (definir valores dos limites para alarmes, comando para 
+acionamento de válvulas, etc.).
+
+27) Integração com um banco de dados para armazenamento das informações.
+
+28) O software SCS da IHM recebe dados tanto do SCS_CPU quanto do IWCS esse segundo também tem função de envio dos dados;
+
+29) O sistema deve ser composto em um nível de detalhamento maior por uma lógica de alarmes do tipo camadas que faz o cascateamento entre os elementos integrados entre si;
+
+30) O sistema deve ser composto de uma tela de redundancia, por tratar-se de sistema critico esse é composto no meio físico de duas CPU ao qual é selecionado qual delas está operante e sendo monitorada e tem a capacidade de mudar o funcionamento de forma autonoma em caso de inatividade de uma destas;
+
+
