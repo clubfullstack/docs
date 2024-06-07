@@ -28,3 +28,58 @@ make
   5.4 - Ao rodar, chama a (1)máquina do QEMU, inserindo o (2) Kernel
 abrindo a porta TCP para conexão com código de Teste.
   5.5 - O código de teste por sua vez fica responsável por  
+
+-------------------
+# Dockerfile
+
+# Utiliza a imagem base do Ubuntu
+FROM ubuntu:20.04
+
+# Define o mantenedor do Docker
+LABEL maintainer="seuemail@dominio.com"
+
+# Atualiza a lista de pacotes e instala dependências
+RUN apt-get update && \
+    apt-get install -y \
+    libglib2.0-0 \
+    libglib2.0-dev \
+    libpixman-1-0 \
+    libpixman-1-dev \
+    flex \
+    bison \
+    build-essential \
+    git \
+    wget
+
+# Baixa e extrai o QEMU
+RUN wget https://download.qemu.org/qemu-6.1.0.tar.xz && \
+    tar xvJf qemu-6.1.0.tar.xz && \
+    cd qemu-6.1.0 && \
+    ./configure --target-list=sparc-softmmu && \
+    make -j$(nproc) && \
+    make install
+
+# Define o diretório de trabalho
+WORKDIR /qemu-6.1.0/build
+
+# Comando padrão para manter o contêiner ativo
+CMD ["bash"]
+
+---------------------
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  qemu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qemu_sparc
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./data:/data  # Montar um volume para persistir dados, se necessário
+    command: bash
+
+
