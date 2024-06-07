@@ -1,0 +1,15 @@
+# docker-compose.yml
+
+version: '3.8'
+
+services:
+  qemu:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qemu_sparc
+    tty: true
+    stdin_open: true
+    volumes:
+      - ./data:/data  # Montar um volume para persistir dados, se necessário
+    command: bash
