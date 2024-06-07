@@ -1,0 +1,30 @@
+1° Baixei o repositorio 
+
+https://github.com/qemu/qemu/tree/v8.1.1
+
+2° Realizei a configuração para buildar arquitetura Spark
+
+./configure --target-list=sparc-softmmu
+
+3° Instalei as dependencias faltantes
+
+sudo apt-get install libglib2.0-0 libglib2.0-dev
+sudo apt install libpixman-1-0 libpixman-1-dev
+sudo apt install flex
+sudo apt install bison
+
+depois novamente: ./configure --target-list=sparc-softmmu
+
+4° Entrei na pasta Build e realizei o make
+
+cd build/
+make
+
+5° Proximos passos após compilar e configurar o QEMU
+  5.1 - compilar e configurar
+  5.2 - fazer a codificacao do codigo que sera de Kernel e compilar 
+	(gearar o .elf)
+  5.3 - Preparacao do lado python para gerar o teste do Artigo
+  5.4 - Ao rodar, chama a (1)máquina do QEMU, inserindo o (2) Kernel
+abrindo a porta TCP para conexão com código de Teste.
+  5.5 - O código de teste por sua vez fica responsável por  
